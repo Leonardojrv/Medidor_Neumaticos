@@ -85,14 +85,9 @@ public abstract class Neumaticos {
         this.estadoRueda = estadoRueda;
     }
     
-    abstract int getpresionActual();
-    abstract int setpresionActual();
-    abstract int getposicionRueda();
+
     abstract boolean estaDesgastado();
     abstract boolean necesitaAire();
     abstract boolean necesitaCambio();    
-    abstract int setEstadoRueda();
-    abstract int getEstadoRuedaN();
-
 
 }
