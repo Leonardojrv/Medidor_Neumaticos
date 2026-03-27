@@ -1,6 +1,6 @@
 package Libreria;
 
-public abstract class SensorPresion extends Neumaticos {
+public abstract class SensorPresion{
     private String IdSensor;
     
     public SensorPresion(){
@@ -19,8 +19,24 @@ public abstract class SensorPresion extends Neumaticos {
         this.IdSensor = IdSensor;
     }
     
-    abstract float medirPresion();
-    abstract float detectarEstadoPresion();
+    public float medirPresion(Neumaticos n) {
+        return n.getPresionActual();
+    }    
+    
+    public EstadoRueda detectarEstado(Neumaticos n) {
+        if (n.getPresionActual() <= 0) 
+            return EstadoRueda.vacia;
+        
+        if (n.getPresionActual() <= 29)
+            return EstadoRueda.baja_presion;
+        
+        if (n.getEstadoRueda() >= 45)
+            return EstadoRueda.sobre_inflada;
+        
+        return EstadoRueda.presion_optima;
+        
+        
+    }
     
     
 }

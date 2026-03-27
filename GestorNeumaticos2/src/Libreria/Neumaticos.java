@@ -1,32 +1,27 @@
 package Libreria;
 
-public abstract class Neumaticos {
+public abstract class Neumaticos{
     private String IdNeumatico;
-    private int posicionNeumatico;
+    private PosicionRueda posicion;
     private float presionActual;
     private float presionRecomendada;
     private float presionMaxima;
-    private float nivelDesgaste;
     private int estadoRueda;
 
     public Neumaticos(){
         IdNeumatico="";
-        posicionNeumatico=0;
+        posicion=posicion;
         presionActual=0;
         presionRecomendada=0;
         presionMaxima=0;
-        nivelDesgaste=0;
         estadoRueda=0;
     }
 
-    public Neumaticos(String IdNeumatico, int posicionNeumatico, float presionActual, float presionRecomendada, float presionMaxima, float nivelDesgaste, int estadoRueda) {
-        this.IdNeumatico = IdNeumatico;
-        this.posicionNeumatico = posicionNeumatico;
-        this.presionActual = presionActual;
-        this.presionRecomendada = presionRecomendada;
-        this.presionMaxima = presionMaxima;
-        this.nivelDesgaste = nivelDesgaste;
-        this.estadoRueda = estadoRueda;
+    public Neumaticos(String id, PosicionRueda pos, float pActual, float pRecomen) {
+        this.IdNeumatico = id;
+        this.posicion = pos;
+        this.presionActual = pActual;
+        this.presionRecomendada = pRecomen;
     }
 
     public String getIdNeumatico() {
@@ -37,12 +32,12 @@ public abstract class Neumaticos {
         this.IdNeumatico = IdNeumatico;
     }
 
-    public int getPosicionNeumatico() {
-        return posicionNeumatico;
+    public PosicionRueda getPosicion() {
+        return posicion;
     }
 
-    public void setPosicionNeumatico(int posicionNeumatico) {
-        this.posicionNeumatico = posicionNeumatico;
+    public void setPosicion(PosicionRueda posicion) {
+        this.posicion = posicion;
     }
 
     public float getPresionActual() {
@@ -69,14 +64,6 @@ public abstract class Neumaticos {
         this.presionMaxima = presionMaxima;
     }
 
-    public float getNivelDesgaste() {
-        return nivelDesgaste;
-    }
-
-    public void setNivelDesgaste(float nivelDesgaste) {
-        this.nivelDesgaste = nivelDesgaste;
-    }
-
     public int getEstadoRueda() {
         return estadoRueda;
     }
@@ -85,9 +72,15 @@ public abstract class Neumaticos {
         this.estadoRueda = estadoRueda;
     }
     
-
+    
+    
+  
     abstract boolean estaDesgastado();
-    abstract boolean necesitaAire();
+    
+    public boolean necesitaAire() {
+        return this.presionActual < (this.presionRecomendada * 0.9); // Ejemplo: si bajó del 90%
+    }
+    
     abstract boolean necesitaCambio();    
 
 }

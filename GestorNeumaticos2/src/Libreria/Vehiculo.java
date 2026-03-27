@@ -1,8 +1,12 @@
 package Libreria;
-public abstract class Vehiculo {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Vehiculo {
     private String marca;
     private String modelo;
     private String placa;
+    private List<Neumaticos>neumaticos;
     
     
     public Vehiculo(){
@@ -15,6 +19,7 @@ public abstract class Vehiculo {
         this.marca = marca;
         this.modelo = modelo;
         this.placa = placa;
+        this.neumaticos = new ArrayList<>();
     }
 
     public String getMarca() {
@@ -41,10 +46,34 @@ public abstract class Vehiculo {
         this.placa = placa;
     }
    
-    abstract boolean quitarNeumatico();
-    abstract boolean agregarNeumatico();
-    abstract boolean reemplazarNeumatico();
-    abstract int getNeumaticoACambiar();
+
+    public boolean agregarNeumatico(Neumaticos n) {
+        if (this.neumaticos.size() < 4) { // Validación de las 4 ruedas
+            return this.neumaticos.add(n);
+        }
+        return false;
+    }
+
+    public boolean quitarNeumatico(Neumaticos n) {
+        return this.neumaticos.remove(n);
+    }
+   
+    public boolean reemplazarNeumatico(Neumaticos viejo, Neumaticos nuevo) {
+        try {
+            int indice = this.neumaticos.indexOf(viejo);
+            
+            if (indice != -1) {
+                this.neumaticos.set(indice, nuevo);
+                return true;
+            }
+            return false;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    //int getNeumaticoACambiar();
+    
 }
 
 
