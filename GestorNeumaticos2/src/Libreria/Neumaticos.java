@@ -1,12 +1,12 @@
 package Libreria;
 
-public abstract class Neumaticos{
+public class Neumaticos{
     private String IdNeumatico;
     private PosicionRueda posicion;
     private float presionActual;
     private float presionRecomendada;
     private float presionMaxima;
-    private int estadoRueda;
+    private EstadoRueda estadoRueda;
 
     public Neumaticos(){
         IdNeumatico="";
@@ -14,7 +14,7 @@ public abstract class Neumaticos{
         presionActual=0;
         presionRecomendada=0;
         presionMaxima=0;
-        estadoRueda=0;
+        estadoRueda=estadoRueda;
     }
 
     public Neumaticos(String id, PosicionRueda pos, float pActual, float pRecomen) {
@@ -64,18 +64,18 @@ public abstract class Neumaticos{
         this.presionMaxima = presionMaxima;
     }
 
-    public int getEstadoRueda() {
+    public EstadoRueda getEstadoRueda() {
         return estadoRueda;
     }
 
-    public void setEstadoRueda(int estadoRueda) {
+    public void setEstadoRueda(EstadoRueda estadoRueda) {
         this.estadoRueda = estadoRueda;
     }
     
     
     
     public boolean necesitaAire() {
-        return this.presionActual < (this.presionRecomendada * 0.9);
+        return this.presionActual < (this.presionRecomendada * 0.5);
     }
        
 
