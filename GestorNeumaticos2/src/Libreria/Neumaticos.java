@@ -74,13 +74,9 @@ public abstract class Neumaticos{
     
     
     
-  
-    abstract boolean estaDesgastado();
-    
     public boolean necesitaAire() {
-        return this.presionActual < (this.presionRecomendada * 0.9); // Ejemplo: si bajó del 90%
+        return this.presionActual < (this.presionRecomendada * 0.9);
     }
-    
-    abstract boolean necesitaCambio();    
+       
 
 }

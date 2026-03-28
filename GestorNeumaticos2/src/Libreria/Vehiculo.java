@@ -48,7 +48,7 @@ public class Vehiculo {
    
 
     public boolean agregarNeumatico(Neumaticos n) {
-        if (this.neumaticos.size() < 4) { // Validación de las 4 ruedas
+        if (this.neumaticos.size() < 4) {
             return this.neumaticos.add(n);
         }
         return false;
