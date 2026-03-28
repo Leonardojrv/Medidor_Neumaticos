@@ -1,4 +1,3 @@
-
 package Libreria;
 
 public interface ISensor {

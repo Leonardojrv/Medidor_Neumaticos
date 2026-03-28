@@ -19,7 +19,6 @@ public class AppGestorNeumaticos {
     toyota.agregarNeumatico(n4);
 
     SensorPresion sens = new SensorPresion();
-    ISensor ISe = new ISensor();
     Compresor com = new Compresor();
     float pres = toyota.getNeumaticos().get(0).getPresionActual();
     
@@ -29,16 +28,16 @@ public class AppGestorNeumaticos {
     System.out.println("placa: " + toyota.getPlaca());
     
     System.out.println("--- ESTADO DE NEUMATICOS ---");
-    System.out.println("neumatico delantera izquierda: " + toyota.getNeumaticos().get(0).getPresionActual() + " " + sens.detectarEstado(n1));
-    System.out.println("neumatico delantera derecha: " + toyota.getNeumaticos().get(1).getPresionActual() + " " + sens.detectarEstado(n2));
-    System.out.println("neumatico trasera izquierda: " + toyota.getNeumaticos().get(2).getPresionActual() + " " + sens.detectarEstado(n3));
-    System.out.println("neumatico trasera derecha: " + toyota.getNeumaticos().get(3).getPresionActual() + " " + sens.detectarEstado(n4));
+    System.out.println("neumatico delantera izquierda: " + toyota.getNeumaticos().get(0).getPresionActual() + " " + sens.detectarEstadoPresion(n1));
+    System.out.println("neumatico delantera derecha: " + toyota.getNeumaticos().get(1).getPresionActual() + " " + sens.detectarEstadoPresion(n2));
+    System.out.println("neumatico trasera izquierda: " + toyota.getNeumaticos().get(2).getPresionActual() + " " + sens.detectarEstadoPresion(n3));
+    System.out.println("neumatico trasera derecha: " + toyota.getNeumaticos().get(3).getPresionActual() + " " + sens.detectarEstadoPresion(n4));
 
     System.out.println("--- ESTADO DE NEUMATICOS inflados ---");
-    System.out.println("neumatico a llenar delantera izquierda:  " + toyota.getNeumaticos().get(0).getPresionActual() + " " + com.inflar(n1, ISe));
-    System.out.println("neumatico a llenar delantera derecha: " + toyota.getNeumaticos().get(1).getPresionActual() + " " + com.inflar(n2, ISe));
-    System.out.println("neumatico a llenar trasera izquierda: " + toyota.getNeumaticos().get(2).getPresionActual() + " " + com.inflar(n3, ISe));
-    System.out.println("neumatico a llenar trasera derecha: " + toyota.getNeumaticos().get(3).getPresionActual() + " " + com.inflar(n4, ISe));
+    System.out.println("neumatico a llenar delantera izquierda:  " + toyota.getNeumaticos().get(0).getPresionActual() + " " + com.inflar(n1, sens));
+    System.out.println("neumatico a llenar delantera derecha: " + toyota.getNeumaticos().get(1).getPresionActual() + " " + com.inflar(n2, sens));
+    System.out.println("neumatico a llenar trasera izquierda: " + toyota.getNeumaticos().get(2).getPresionActual() + " " + com.inflar(n3, sens));
+    System.out.println("neumatico a llenar trasera derecha: " + toyota.getNeumaticos().get(3).getPresionActual() + " " + com.inflar(n4, sens));
 
     
     System.out.println("--------------------------------");

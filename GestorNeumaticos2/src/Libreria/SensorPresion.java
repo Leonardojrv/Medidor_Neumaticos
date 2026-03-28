@@ -1,6 +1,6 @@
 package Libreria;
 
-public class SensorPresion{
+public class SensorPresion implements ISensor{
     private String IdSensor;
     
     public SensorPresion(){
@@ -19,11 +19,23 @@ public class SensorPresion{
         this.IdSensor = IdSensor;
     }
     
-    public float medirPresion(Neumaticos n) {
-        return n.getPresionActual();
-    }    
+    @Override
+    public double medirPresion(Neumaticos neumatico) {
+        return neumatico.getPresionActual();
+    }  
     
-    public EstadoRueda detectarEstado(Neumaticos n) {
+    @Override
+    public boolean esLecturaValida() {
+        return true; // Por ahora digamos que siempre es válida
+    }
+    
+    // 4. Método obligatorio por la Interfaz
+    @Override
+    public void calibrar() {
+        System.out.println("Sensor " + IdSensor + " calibrado correctamente.");
+    }
+    
+    public EstadoRueda detectarEstadoPresion(Neumaticos n) {
         if (n.getPresionActual() <= 0) 
             return EstadoRueda.vacia;
         
@@ -34,7 +46,9 @@ public class SensorPresion{
             return EstadoRueda.sobre_inflada;
         
         return EstadoRueda.presion_optima;
-        
+      
     }
+    
+    
 
 }
