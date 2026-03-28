@@ -3,11 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/leito/Desktop/caso1Neumaticos/GestorNeumaticos2/src/app/AppGestorNeumaticos.java</file>
-            <file>file:/C:/Users/leito/Desktop/caso1Neumaticos/GestorNeumaticos2/src/Libreria/SensorPresion.java</file>
-            <file>file:/C:/Users/leito/Desktop/caso1Neumaticos/GestorNeumaticos2/src/Libreria/Vehiculo.java</file>
-            <file>file:/C:/Users/leito/Desktop/caso1Neumaticos/GestorNeumaticos2/src/Libreria/Compresor.java</file>
-            <file>file:/C:/Users/leito/Desktop/caso1Neumaticos/GestorNeumaticos2/src/Libreria/Neumaticos.java</file>
+            <file>file:/C:/Users/aleja/Desktop/Neumaticos/Medidor_Neumaticos/GestorNeumaticos2/src/Libreria/ISensor.java</file>
+            <file>file:/C:/Users/aleja/Desktop/Neumaticos/Medidor_Neumaticos/GestorNeumaticos2/src/Libreria/Neumaticos.java</file>
+            <file>file:/C:/Users/aleja/Desktop/Neumaticos/Medidor_Neumaticos/GestorNeumaticos2/src/Libreria/PosicionRueda.java</file>
+            <file>file:/C:/Users/aleja/Desktop/Neumaticos/Medidor_Neumaticos/GestorNeumaticos2/src/Libreria/EstadoRueda.java</file>
+            <file>file:/C:/Users/aleja/Desktop/Neumaticos/Medidor_Neumaticos/GestorNeumaticos2/src/Libreria/Vehiculo.java</file>
+            <file>file:/C:/Users/aleja/Desktop/Neumaticos/Medidor_Neumaticos/GestorNeumaticos2/src/Libreria/SensorPresion.java</file>
+            <file>file:/C:/Users/aleja/Desktop/Neumaticos/Medidor_Neumaticos/GestorNeumaticos2/src/Libreria/Compresor.java</file>
+            <file>file:/C:/Users/aleja/Desktop/Neumaticos/Medidor_Neumaticos/GestorNeumaticos2/src/app/AppGestorNeumaticos.java</file>
         </group>
     </open-files>
 </project-private>
