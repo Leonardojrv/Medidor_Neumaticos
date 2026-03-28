@@ -30,13 +30,13 @@ public abstract class SensorPresion{
         if (n.getPresionActual() <= 29)
             return EstadoRueda.baja_presion;
         
-        if (n.getEstadoRueda() >= 45)
+        if (n.getPresionActual()>= 45)
             return EstadoRueda.sobre_inflada;
         
         return EstadoRueda.presion_optima;
         
         
+        
     }
-    
-    
+
 }
