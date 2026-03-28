@@ -26,10 +26,9 @@ public class SensorPresion implements ISensor{
     
     @Override
     public boolean esLecturaValida() {
-        return true; // Por ahora digamos que siempre es válida
+        return true; 
     }
     
-    // 4. Método obligatorio por la Interfaz
     @Override
     public void calibrar() {
         System.out.println("Sensor " + IdSensor + " calibrado correctamente.");
