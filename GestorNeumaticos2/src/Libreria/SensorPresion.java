@@ -1,6 +1,6 @@
 package Libreria;
 
-public abstract class SensorPresion{
+public class SensorPresion{
     private String IdSensor;
     
     public SensorPresion(){

@@ -45,7 +45,16 @@ public class Vehiculo {
     public void setPlaca(String placa) {
         this.placa = placa;
     }
+
+    public List<Neumaticos> getNeumaticos() {
+        return neumaticos;
+    }
+
+    public void setNeumaticos(List<Neumaticos> neumaticos) {
+        this.neumaticos = neumaticos;
+    }
    
+    
 
     public boolean agregarNeumatico(Neumaticos n) {
         if (this.neumaticos.size() < 4) {
@@ -71,8 +80,6 @@ public class Vehiculo {
             return false;
         }
     }
-
-    //int getNeumaticoACambiar();
     
 }
 

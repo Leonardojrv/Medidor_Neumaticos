@@ -74,9 +74,10 @@ public class Neumaticos{
     
     
     
-    public boolean necesitaAire() {
-        return this.presionActual < (this.presionRecomendada * 0.5);
+
+    @Override
+    public String toString() {
+        return "Posición: " + posicion + " | Presión: " + presionActual + " PSI";
     }
-       
 
 }
