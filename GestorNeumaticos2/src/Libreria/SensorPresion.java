@@ -35,8 +35,6 @@ public abstract class SensorPresion{
         
         return EstadoRueda.presion_optima;
         
-        
-        
     }
 
 }
